@@ -17,6 +17,7 @@ class CreateVisitorsTable extends Migration
         Schema::create('visitors', function (Blueprint $table) {
             $table->id();
             $table->foreignId('country_id')->nullable()->constrained();
+            
             $table->string('ip_address');
             $table->timestamps();
         });
